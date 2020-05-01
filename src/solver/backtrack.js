@@ -1,12 +1,16 @@
-function findCell(cellRow, cellColumn, sudokuMatrix) {
+export function findCell(cellRow, cellColumn, sudokuMatrix) {
     if (cellRow >= 9) {
         return true;
     }
-    const nextCellColumn = cellColumn === 9 ? cellColumn + 1 : 1;
-    const nextCellRow = nextCellColumn === 1 ? cellRow + 1 : cellRow;
 
-    const cell = sudokuMatrix.getVal(cellRow, cellColumn);
-    if (cell.value) {
+    //console.log(cellRow, ' ', cellColumn);
+
+    const nextCellColumn = cellColumn === 8 ? 0 : cellColumn + 1;
+    const nextCellRow = nextCellColumn === 0 ? cellRow + 1 : cellRow;
+
+    const cell = sudokuMatrix.getCell(cellRow, cellColumn);
+    if (cell.value != 0) {
+        console.log(cellRow, cellColumn);
         return findCell(nextCellRow, nextCellColumn, sudokuMatrix);
     }
 

@@ -8,7 +8,7 @@ import {
 export function solve(sudokuInputMatrix) {
     const sudokuMatrix = new SudokuMatrix(sudokuInputMatrix);
 
-    // backtrackingAlgorithm(sudokuMatrix);
+    backtrackingAlgorithm(sudokuMatrix);
 
     return {
         matrix: sudokuMatrix.toArray(),

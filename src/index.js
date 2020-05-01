@@ -1,5 +1,5 @@
 import {
-    Solve
+    solve
 } from './solver/solver-main';
 
 const solveButton = document.querySelector('.solve-button');
