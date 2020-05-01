@@ -12,7 +12,6 @@ export class SudokuMatrix {
             return newSet;
         }
 
-        let currentSudokuImportNumberId = 0;
         for (let row = 0; row < this._fieldHeight; row++) {
             this._field.push([]);
             for (let col = 0; col < this._fieldWidth; col++) {
@@ -20,16 +19,24 @@ export class SudokuMatrix {
                     possibleValues: nineNumbersSet(),
                     value: 0
                 });
-                this._field[row][col].value = +sudokuInputNumbers[currentSudokuImportNumberId];
+            }
+        }
+
+        let currentSudokuImportNumberId = 0;
+        for (let row = 0; row < this._fieldHeight; row++) {
+            for (let col = 0; col < this._fieldWidth; col++) {
+                const newValue =
+                    isFinite(+sudokuInputNumbers[currentSudokuImportNumberId]) ?
+                    +sudokuInputNumbers[currentSudokuImportNumberId] : 0;
                 currentSudokuImportNumberId += 1;
 
-                if (!isFinite(this._field[row][col].value))
-                    this._field[row][col].value = 0;
+                if (newValue != 0)
+                    this.setValue(row, col, newValue);
             }
         }
     }
 
-    setVal(cellRow, cellColumn, value, updateSets = true) {
+    setValue(cellRow, cellColumn, value, updateSets = true) {
         this._field[cellRow][cellColumn].value = value;
 
         if (updateSets)

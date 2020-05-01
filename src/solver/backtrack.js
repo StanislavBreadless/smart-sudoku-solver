@@ -3,8 +3,6 @@ export function findCell(cellRow, cellColumn, sudokuMatrix) {
         return true;
     }
 
-    //console.log(cellRow, ' ', cellColumn);
-
     const nextCellColumn = cellColumn === 8 ? 0 : cellColumn + 1;
     const nextCellRow = nextCellColumn === 0 ? cellRow + 1 : cellRow;
 
@@ -16,7 +14,7 @@ export function findCell(cellRow, cellColumn, sudokuMatrix) {
 
     for (const value of cell.possibleValues) {
         // Trying to use the 'value' as the value of the cell
-        cell.value = value;
+        sudokuMatrix.setValue(cellRow, cellColumn, value, false);
 
         // If the cell does not break sudoku and it is possible to 
         // find the solution for the matrix using current value, then
