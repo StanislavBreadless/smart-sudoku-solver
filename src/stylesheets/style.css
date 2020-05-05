@@ -1,0 +1,77 @@
+.main-content {
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    margin: 2rem;
+}
+
+.sudoku-input-table {
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+.sudoku-input-cell {
+    font-size: 1.3rem;
+    box-sizing: border-box;
+    border: 1px solid black;
+
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.sudoku-input-cell:hover {
+    background-color: #eee;
+}
+
+.sudoku-input-textbox {
+    width: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+
+    background-color: inherit;
+    cursor: inherit;
+}
+
+.sudoku-input-textbox:focus {
+    outline: none;
+}
+
+.bold-right-border {
+    border-right: 3px solid black;
+}
+
+.bold-bottom-border {
+    border-bottom: 3px solid black;
+}
+
+.control-buttons-wrapper {
+    padding: 0 10px;
+}
+
+.clear-button {
+    float: left;
+}
+
+.solve-button {
+    float: right;
+}
+
+.control-button {
+    padding: 1rem;
+    background: none;
+    border: 1px solid black;
+
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.control-button:hover {
+    background-color: #eee;
+}
