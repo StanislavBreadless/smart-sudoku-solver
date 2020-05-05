@@ -17,7 +17,9 @@ export class SudokuMatrix {
             for (let col = 0; col < this._fieldWidth; col++) {
                 this._field[row].push({
                     possibleValues: nineNumbersSet(),
-                    value: 0
+                    value: 0,
+                    cellRow: row,
+                    cellColumn: col
                 });
             }
         }

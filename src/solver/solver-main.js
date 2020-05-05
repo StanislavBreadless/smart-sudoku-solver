@@ -7,11 +7,15 @@ import {
 import {
     nakedSingleAlgorithm
 } from './naked-single';
+import {
+    hiddenSingleAlgorithm
+} from './hidden-single';
 
 export function solve(sudokuInputMatrix) {
     const sudokuMatrix = new SudokuMatrix(sudokuInputMatrix);
 
-    while (nakedSingleAlgorithm(sudokuMatrix));
+    while (nakedSingleAlgorithm(sudokuMatrix) ||
+        hiddenSingleAlgorithm(sudokuMatrix));
 
     backtrackingAlgorithm(sudokuMatrix);
 
