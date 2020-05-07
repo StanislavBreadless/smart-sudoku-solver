@@ -1,26 +1,26 @@
 import {
-    SudokuMatrix
+  SudokuMatrix
 } from './sudoku-matrix';
 import {
-    backtrackingAlgorithm
+  backtrackingAlgorithm
 } from './backtrack';
 import {
-    nakedSingleAlgorithm
+  nakedSingleAlgorithm
 } from './naked-single';
 import {
-    hiddenSingleAlgorithm
+  hiddenSingleAlgorithm
 } from './hidden-single';
 
 export function solve(sudokuInputMatrix) {
-    const sudokuMatrix = new SudokuMatrix(sudokuInputMatrix);
+  const sudokuMatrix = new SudokuMatrix(sudokuInputMatrix);
 
-    while (nakedSingleAlgorithm(sudokuMatrix) ||
-        hiddenSingleAlgorithm(sudokuMatrix));
+  while (nakedSingleAlgorithm(sudokuMatrix) ||
+    hiddenSingleAlgorithm(sudokuMatrix));
 
-    backtrackingAlgorithm(sudokuMatrix);
+  backtrackingAlgorithm(sudokuMatrix);
 
-    return {
-        matrix: sudokuMatrix.toArray(),
-        solved: sudokuMatrix.solved()
-    };
+  return {
+    matrix: sudokuMatrix.toArray(),
+    solved: sudokuMatrix.solved()
+  };
 }

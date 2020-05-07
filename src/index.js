@@ -1,11 +1,11 @@
 import {
-    solve
+  solve
 } from './solver/solver-main';
 import {
-    initTable,
-    getSudokuInput,
-    clearSudokuInput,
-    setSudokuInput
+  initTable,
+  getSudokuInput,
+  clearSudokuInput,
+  setSudokuInput
 } from './gui/gui-main';
 
 import 'normalize.css';
@@ -20,7 +20,7 @@ clearButton.onclick = clearSudokuInput;
 const solveButton = document.querySelector('.solve-button');
 
 solveButton.addEventListener('click', (event) => {
-    const solvedPuzzle = solve(getSudokuInput().map(value => parseInt(value)));
+  const solvedPuzzle = solve(getSudokuInput().map(value => parseInt(value)));
 
-    setSudokuInput(solvedPuzzle.matrix);
+  setSudokuInput(solvedPuzzle.matrix);
 });
