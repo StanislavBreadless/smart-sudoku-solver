@@ -8,6 +8,7 @@ function createCellInput(cell) {
 
   cellValueInput.onfocus = (event) => {
     cellValueInput.value = '';
+    cell.classList.remove('sudoku-set-cell');
   }
   cellValueInput.oninput = (event) => {
     if (cellValueInput.value.length > 1 ||
@@ -20,7 +21,9 @@ function createCellInput(cell) {
     if (cellValueInput.value.length === 1) {
       cell.classList.add('sudoku-set-cell');
     }
-
+    else {
+      cell.classList.remove('sudoku-set-cell');
+    }
   }
 
   cellValueInput.classList.add('sudoku-input-textbox');
@@ -66,7 +69,7 @@ export function initTable(tableRef) {
 export function clearSudokuInput() {
   sudokuInputs.forEach(({ input, cell }) => {
     input.value = '';
-    cell.classList.remove('sudoku-set-cell');
+    input.dispatchEvent(new Event('input'));
   });
 }
 
