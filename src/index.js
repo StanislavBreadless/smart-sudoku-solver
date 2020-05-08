@@ -20,5 +20,8 @@ solveButton.addEventListener('click', (event) => {
   const sudokuSolverWorker = new Worker();
   sudokuSolverWorker.postMessage(getSudokuInput().map(value => parseInt(value)));
 
-  sudokuSolverWorker.onmessage = (solverResponse) => setSudokuInput(solverResponse.data.matrix);
+  sudokuSolverWorker.onmessage = (solverResponse) => {
+    setSudokuInput(solverResponse.data.matrix)
+    sudokuSolverWorker.terminate();
+  };
 });
