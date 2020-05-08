@@ -2,23 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <main class="main-content">
-        <div class="app">
-            <table class="sudoku-input-table">
-            </table>
-            <br>
-            <div class="control-buttons-wrapper">
-                <button type="button" class="control-button clear-button">Clear</button>
-                <button type="button" class="control-button solve-button">Solve</button>
-            </div>
+  <main class="main-content">
+    <div class="app">
+      <div class="sudoku-table-wrapper">
+        <table class="sudoku-input-table">
+
+        </table>
+        <div class="sudoku-waiting-msg">
+          <div class="sudoku-waiting-text">Please wait until the solver finishes it's computations...</div>
+          <div class="sudoku-waiting-spinner"></div>
+          <div class="sudoku-waiting-cancel-button-wrapper">
+            <button class="sudoku-waiting-cancel-button">Cancel</button>
+          </div>
         </div>
-    </main>
+
+      </div>
+      <br>
+      <div class="control-buttons-wrapper">
+        <button type="button" class="control-button clear-button">Clear</button>
+        <button type="button" class="control-button solve-button">Solve</button>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>
