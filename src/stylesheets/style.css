@@ -87,7 +87,6 @@
 
 .sudoku-waiting-msg {
   display: none;
-
   position: absolute;
   top: calc(40% - 70px);
   left: calc(40% - 70px);
@@ -122,3 +121,26 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.sudoku-waiting-cancel-button {
+  font-family: monospace;
+  font-size: 1.1rem;
+
+  background: none;
+  border: 1px solid gray;
+  color: gray;
+  padding: 0.5rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.sudoku-waiting-cancel-button:hover {
+  border: 1px solid red;
+  color: red;
+}
+
+.sudoku-waiting-cancel-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
