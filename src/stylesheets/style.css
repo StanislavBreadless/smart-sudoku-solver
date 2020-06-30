@@ -3,7 +3,7 @@
     align-items: center;
     flex-direction: column;
 
-    max-width: 40%;
+    max-width: 500px;
     margin: 0px auto;
 }
 
@@ -11,15 +11,21 @@
     margin: 2rem;
 }
 
-.sudoku-table-wrapper {
-  position: relative;
-}
-
 .app-description {
     text-align: center;
 
     font-size: 1.2rem;
 }
+
+.app-title {
+    text-align: center;
+}
+
+.sudoku-table-wrapper {
+  margin-top: 2rem;
+  position: relative;
+}
+
 
 .sudoku-input-table {
     border: 3px solid black;
@@ -154,3 +160,8 @@
   justify-content: center;
 }
 
+@media (max-width: 450px) {
+    .sudoku-input-cell {
+        height: calc((100vw - 2rem) / 9);
+    }
+}
