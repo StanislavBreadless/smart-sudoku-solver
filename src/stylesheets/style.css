@@ -1,6 +1,10 @@
 .main-content {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    max-width: 40%;
+    margin: 0px auto;
 }
 
 .app {
@@ -9,6 +13,12 @@
 
 .sudoku-table-wrapper {
   position: relative;
+}
+
+.app-description {
+    text-align: center;
+
+    font-size: 1.2rem;
 }
 
 .sudoku-input-table {
