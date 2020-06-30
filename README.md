@@ -3,7 +3,7 @@ A solver for sudoku that implements some of the best sudoku-solving practices in
 
 # Project Status
 
-The main functionality is almost ready. But there are much more things to be done.
+The main functionality is ready. But there are much more things to be done.
 
 1. Add better design
 2. Add more optimizations
