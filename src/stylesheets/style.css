@@ -26,6 +26,10 @@
   position: relative;
 }
 
+.sudoku-clear-tip {
+  text-align: center;
+  display: none;
+}
 
 .sudoku-input-table {
     border: 3px solid black;
